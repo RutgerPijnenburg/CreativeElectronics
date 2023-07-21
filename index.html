@@ -6,13 +6,34 @@
     <title>Rutger Pijnenburg</title>
     <link
       rel="stylesheet"
-      href="/Portfolio2/CreativeElectronics/Styles/General.css"
+      href="/CreativeElectronics/Styles/General.css"
     />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <script>
+      let frame = 1;
+      let MouseDown = false;
+
+      addEventListener("mousemove", (event) => {
+        // if (MouseDown) {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+        // mouseY = event.clientY;
+        frame = Math.round((mouseX / window.innerWidth) * 89);
+        if (frame < 1) {
+          frame = 1;
+        }
+
+        document.getElementById(
+          "js-Hero-Image"
+        ).src = `/CreativeElectronics/Images/CreativeElectronics/Table (${frame}).jpg`;
+        // }
+      });
+    </script>
   </head>
   <body>
     <div class="Navigation" id="Navigation">
@@ -44,9 +65,49 @@
       </div>
       <div class="Navigation-Element">
         <a href="mailto:r.a.pijnenburg@student.tue.nl"
-          ><button class="Hero-Button">Contact Me</button></a
+          ><button class="Hero-Button">Mail Me</button></a
         >
       </div>
     </div>
+    <section>
+      <div class="Column">
+        <p class="Title">Creative Electronics</p>
+        <p class="Text">
+          For this course we worked a lot with electronics, as the name
+          suggests, the taught me the basics about how electrical components
+          work and how to use them in a system, we had to make a multitude of
+          reports and lastly made a prototype to showcase what we had learned in
+          the course. In this course I progressed in the making of reports,
+          becoming better in writing reports, I also got to work on some
+          creativity and aesthetics in the form of the covers I made for these
+          reports, lastly the course also allowed me to develop in technology
+          and realisation as I am now able to make prototypes that show
+          interaction better. Our teamwork mostly went well, we were able to
+          clearly divide tasks, each of us working on what we were good at,
+          while still allowing improvement, the only thing that went less well
+          was my fault, I was sometimes stressing because my teammate was doing
+          things last minute, this is something I do more often, as I usually
+          like to submit well before the deadline. For next time I can see two
+          courses of action, the first would be just trusting that the work will
+          be done, and the other would be saying my opinion, this situation will
+          occur again which is why I have to choose, in my opinion the second is
+          better, however I am currently not able to say my mind like that, so
+          for now I will use the first method and I will work on my
+          communication in the meantime.
+        </p>
+      </div>
+      <img
+        id="js-Hero-Image"
+        draggable="false"
+        src="/CreativeElectronics/Images/CreativeElectronics/Table (1).jpg"
+        alt=""
+      />
+      <div class="CaptionBox">
+        <!-- <p class="Caption"><nobr>drag to rotate</nobr></p> -->
+        <p class="Caption2">
+          <nobr>This is a render of the final result</nobr>
+        </p>
+      </div>
+    </section>
   </body>
 </html>
