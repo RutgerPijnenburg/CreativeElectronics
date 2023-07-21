@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 0.1rem;
+}
+
+body {
+  margin: 0;
+  padding-top: 4.1rem;
+  background-color: white;
+}
+.Navigation-Spacer {
+  flex: 1;
+  pointer-events: none;
+}
+
+.Navigation {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 1.5rem 0rem 1.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.Navigation-Element {
+  padding: 0px 1.5rem;
+  display: inline-block;
+  pointer-events: visible;
+}
+
+.Logo {
+  pointer-events: visible;
+}
+.Logo a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  color: black;
+  padding: 10px;
+}
+
+.Logo a:hover {
+  opacity: 60%;
+}
+
+p,
+a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: black;
+}
+
+.Navigation-Element a {
+  padding: 10px;
+  transition: all 0.2s ease;
+  color: black;
+}
+
+.Navigation-Element a:hover {
+  opacity: 60%;
+}
+
+.Navigation-Element a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.Hero-Button {
+  padding: 5px;
+  background-color: transparent;
+  color: black;
+  border-radius: 5px;
+  border: 2px solid black;
+  transition: all 0.15s;
+}
+
+.Hero-Button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  opacity: 60%;
+  cursor: pointer;
+}
